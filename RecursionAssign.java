@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * This program does option of the assigments
- * hence: 1
+ * This program does one option of the assigments
+ * This is the ooption I chose: 
+ * 1
  * 121
  * 1213121
  * 121312141213121 ... line break at every number greater than 5 if at the end
  * of the line
- * does not go above 15 for formatting reasons
  *
  * @author Liam Csiffary
  * @version 1.0
@@ -76,11 +76,16 @@ public class RecursionAssign {
 
   public static String numbery(int numToGoToo, int currentNum, String finalString) {
 
+    // base case
     if (numToGoToo == currentNum) {
       return finalString;
 
+      // if the number is greater than 5 also add a new line
     } else if (currentNum > 5) {
       return numbery(numToGoToo, currentNum + 1, finalString + currentNum + "\n" + finalString);
+
+      // otherwise just send the numToGoToo, the current num + 1, and the current number 
+      // sandwiched between two of the current strings
     } else {
       return numbery(numToGoToo, currentNum + 1, finalString + currentNum + finalString);
     }
@@ -104,7 +109,7 @@ public class RecursionAssign {
     // of the array, also sends it down an extra line so it's easier to read
     for (int i = 0; i < testCases.length; i++) {
       System.out.println("Original number: " + testCases[i]);
-      String numbery = ("Number thing: \n" + numbery(
+      String numbery = ("Number expanded: \n" + numbery(
           Integer.parseInt(testCases[i]) + 1, 1, "") + "\n");
       System.out.println(numbery);
       txtArray[i] = numbery;
