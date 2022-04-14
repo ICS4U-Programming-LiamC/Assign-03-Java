@@ -3,7 +3,6 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +11,8 @@ import java.util.Scanner;
  * hence: 1
  * 121
  * 1213121
- * 121312141213121 ... line break at every number greater than 5 if at the end of the line
+ * 121312141213121 ... line break at every number greater than 5 if at the end
+ * of the line
  * does not go above 15 for formatting reasons
  *
  * @author Liam Csiffary
@@ -86,7 +86,6 @@ public class RecursionAssign {
     }
   }
 
-
   public static void main(String[] args) {
 
     // creates the file object
@@ -104,7 +103,7 @@ public class RecursionAssign {
     // prints the normal string and the reversed string for each index
     // of the array, also sends it down an extra line so it's easier to read
     for (int i = 0; i < testCases.length; i++) {
-      System.out.println("Original string: " + testCases[i]);
+      System.out.println("Original number: " + testCases[i]);
       String numbery = ("Number thing: \n" + numbery(
           Integer.parseInt(testCases[i]) + 1, 1, "") + "\n");
       System.out.println(numbery);
